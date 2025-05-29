@@ -2,21 +2,24 @@
 using namespace std;
 
 int main() {
-    char sexo;	
-    int edad;
-    float pulsaciones;
-
-    cout << "Ingrese su sexo (M para masculino, F para femenino): ";
-    cin >> sexo;
-    cout << "Ingrese su edad: ";
-    cin >> edad;
-
-    if (sexo == 'F' || sexo == 'f') {
-        pulsaciones = (220 - edad) / 10.0;
-    } else if (sexo == 'M' || sexo == 'm') {
-        pulsaciones = (210 - edad) / 10.0;
+    int n, numero, suma = 0, cont = 0;
+    do {
+        cout << "Ingrese la cantidad de numeros (debe ser positiva): ";
+        cin >> n;
+    } while (n <= 0);
+    for (int i = 0; i < n; i++) {
+        cout << "Numero: ";
+        cin >> numero;
+        if (numero >= 0) {
+            suma += numero;
+            cont++;
+        }
     }
-
-    cout << "El número de pulsaciones cada 10 segundos es: " << pulsaciones << endl;
+    if (cont > 0)
+        cout << "Promedio de no negativos: " << (suma / cont) << endl;
+    else
+        cout << "No se ingresaron numeros no negativos." << endl;
     return 0;
 }
+
+
