@@ -2,17 +2,15 @@
 using namespace std;
 
 int main() {
-    float compra, total;
-
-    cout << "Ingrese el monto de la compra: S/.";
-    cin >> compra;
-
-    if (compra > 1000) {
-        total = compra * 0.8; // aplica 20% de descuento
-    } else {
-        total = compra;
+    int numero;
+    cout << "Ingrese numeros (finaliza con un numero negativo):\n";
+    while (true) {
+        cout << "Numero: ";
+        cin >> numero;
+        if (numero < 0) {
+            cout << "Fin de la captura" << endl;
+            break;  
+        }
     }
-
-    cout << "El total a pagar es: S/." << total << endl;
     return 0;
 }
