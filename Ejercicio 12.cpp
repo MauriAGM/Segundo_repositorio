@@ -2,19 +2,14 @@
 using namespace std;
 
 int main() {
-    float x, g;
-
-    cout << "Ingrese el valor de x: ";
-    cin >> x;
-
-    if (x > 8) {
-        g = 2 * x;
-    } else if (x > 0 && x <= 8) {
-        g = x - 5;
-    } else {
-        g = x * x;
+    int numero;
+    cout << "Ingrese un numero para mostrar su tabla de multiplicar: ";
+    cin >> numero;
+    cout << "\nTabla de multiplicar del " << numero << ":\n";
+    cout << "-----------------------------\n";
+    for (int i = 1; i <= 12; i++) {
+        int producto = numero * i;
+        cout << numero << " x " << i << " = " << producto << endl;
     }
-
-    cout << "El valor de g(x) es: " << g << endl;
     return 0;
 }
