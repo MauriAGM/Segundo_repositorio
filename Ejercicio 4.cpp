@@ -5,9 +5,13 @@ int main() {
     float gasto, suma = 0;
     char continuar;
     do {
-        cout << "Ingrese un gasto: ";
+        cout << "Ingrese un gasto(no negativo): ";
         cin >> gasto;
-        suma += gasto;
+        if (gasto>=0){
+        	suma += gasto;
+		} else {
+			cout << "Gasto invalido. Debe ser un valor no negativo." << endl;
+		}
         cout << "Desea ingresar otro gasto? (s/n): ";
         cin >> continuar;
     } while (continuar == 's' || continuar == 'S');
